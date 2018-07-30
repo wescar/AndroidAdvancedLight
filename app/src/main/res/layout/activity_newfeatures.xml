@@ -12,4 +12,12 @@
         android:gravity="center"
         android:text="@string/open_recyclerView"
         android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/TextView2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/open_cardView"
+        android:clickable="true"/>
 </LinearLayout>

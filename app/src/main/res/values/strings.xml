@@ -10,7 +10,13 @@
     <string name="eight_chapter">第八章</string>
     <string name="nice_chapter">第九章</string>
     <string name="ten_chapter">第十章</string>
-    <string name="open_recyclerView">RecyclerView</string>
 
+
+    <string name="open_recyclerView">RecyclerView</string>
     <string name="item_recycler_content">content</string>
+
+    <string name="open_cardView">CardView</string>
+    <string name="controlSize">控制圆角大小</string>
+    <string name="controlArea">控制阴影面积</string>
+    <string name="controlPicture">控制图片间距</string>
 </resources>

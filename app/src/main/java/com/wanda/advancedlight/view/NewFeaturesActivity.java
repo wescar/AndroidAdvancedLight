@@ -9,7 +9,10 @@ import android.widget.TextView;
 import com.wanda.advancedlight.BaseActivity;
 import com.wanda.advancedlight.R;
 
+import java.util.List;
+
 import butterknife.BindView;
+import butterknife.BindViews;
 import butterknife.ButterKnife;
 
 /**
@@ -20,8 +23,8 @@ import butterknife.ButterKnife;
 public class NewFeaturesActivity extends BaseActivity implements View.OnClickListener{
 
 
-    @BindView(R.id.TextView1)
-    public TextView textView;
+    @BindViews({R.id.TextView1,R.id.TextView2})
+    List<TextView> textView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,7 +36,8 @@ public class NewFeaturesActivity extends BaseActivity implements View.OnClickLis
 
     @Override
     public void initView() {
-        textView.setOnClickListener(this);
+        textView.get(0).setOnClickListener(this);
+        textView.get(1).setOnClickListener(this);
 
     }
 
@@ -47,6 +51,9 @@ public class NewFeaturesActivity extends BaseActivity implements View.OnClickLis
         switch (v.getId()){
             case R.id.TextView1:
                 startActivity(new Intent(NewFeaturesActivity.this,RecycleViewActivity.class));
+                break;
+            case R.id.TextView2:
+                startActivity(new Intent(NewFeaturesActivity.this,CardViewActivity.class));
                 break;
         }
     }
