@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AndroidAdvancedLight</string>
+    <string name="first_chapter">第一章</string>
+    <string name="two_chapter">第二章</string>
+    <string name="three_chapter">第三章</string>
+    <string name="four_chapter">第四章</string>
+    <string name="five_chapter">第五章</string>
+    <string name="six_chapter">第六章</string>
+    <string name="seven_chapter">第七章</string>
+    <string name="eight_chapter">第八章</string>
+    <string name="nice_chapter">第九章</string>
+    <string name="ten_chapter">第十章</string>
+</resources>
