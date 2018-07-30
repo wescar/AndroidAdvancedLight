@@ -10,4 +10,7 @@
     <string name="eight_chapter">第八章</string>
     <string name="nice_chapter">第九章</string>
     <string name="ten_chapter">第十章</string>
+    <string name="open_recyclerView">RecyclerView</string>
+
+    <string name="item_recycler_content">content</string>
 </resources>
