@@ -21,6 +21,12 @@
         <activity android:name=".view.FirstActivity">
 
         </activity>
+        <activity android:name=".view.TwoActivity">
+
+        </activity>
+        <activity android:name=".view.ThreeActivity">
+
+        </activity>
         <activity android:name=".view.RecycleViewActivity">
 
         </activity>
@@ -36,6 +42,11 @@
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
+
+        <activity android:name=".view.ViewSlidingActivity">
+
+        </activity>
+
     </application>
 
 </manifest>

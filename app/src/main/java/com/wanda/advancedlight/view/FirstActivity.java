@@ -28,7 +28,7 @@ public class FirstActivity extends BaseActivity implements View.OnClickListener{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_newfeatures);
+        setContentView(R.layout.activity_first);
         ButterKnife.bind(this);
         initView();
     }
