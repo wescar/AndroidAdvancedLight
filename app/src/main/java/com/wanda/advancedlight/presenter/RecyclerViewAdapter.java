@@ -24,7 +24,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private List<String> mList;
     private Context mContext;
     private OnItemClickListener mOnItemClickListener;
-    List<Integer> mHeights = new ArrayList<Integer>();
+    List<Integer> mHeights = new ArrayList<>();
     public RecyclerViewAdapter(Context context, List<String> list){
         this.mList = list;
         this.mContext = context;

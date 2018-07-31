@@ -10,14 +10,17 @@ import android.widget.Button;
 import com.wanda.advancedlight.BaseActivity;
 import com.wanda.advancedlight.R;
 
+import java.util.List;
+
 import butterknife.BindView;
+import butterknife.BindViews;
 import butterknife.ButterKnife;
 
 
 public class MainActivity extends BaseActivity {
 
-    @BindView(R.id.chapter_first)
-    public Button Button1;
+    @BindViews({R.id.chapter_first,R.id.chapter_two})
+    List<Button> Button;
 
     @Override
     protected void onCreate( Bundle savedInstanceState) {
@@ -32,10 +35,16 @@ public class MainActivity extends BaseActivity {
     @Override
     public void initView() {
 
-        Button1.setOnClickListener(new View.OnClickListener() {
+        Button.get(0).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,NewFeaturesActivity.class));
+            }
+        });
+        Button.get(1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,MaterialDesignActivity.class));
             }
         });
     }

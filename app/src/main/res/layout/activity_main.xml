@@ -16,5 +16,15 @@
         android:textColor="@color/white"
         android:text="@string/first_chapter"/>
 
+    <Button
+        android:layout_margin="10dp"
+        android:id="@+id/chapter_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_chapter"
+        android:textColor="@color/white"
+        android:text="@string/two_chapter"/>
+
+
 
 </LinearLayout>

@@ -27,6 +27,10 @@
         <activity android:name=".view.CardViewActivity">
 
         </activity>
+        <activity android:name=".view.MaterialDesignActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>
