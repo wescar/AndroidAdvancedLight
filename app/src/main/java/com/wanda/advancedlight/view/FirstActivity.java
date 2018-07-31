@@ -11,7 +11,6 @@ import com.wanda.advancedlight.R;
 
 import java.util.List;
 
-import butterknife.BindView;
 import butterknife.BindViews;
 import butterknife.ButterKnife;
 
@@ -20,7 +19,7 @@ import butterknife.ButterKnife;
  * Created by PC on 2018/7/27.
  */
 
-public class NewFeaturesActivity extends BaseActivity implements View.OnClickListener{
+public class FirstActivity extends BaseActivity implements View.OnClickListener{
 
 
     @BindViews({R.id.TextView1,R.id.TextView2})
@@ -50,10 +49,10 @@ public class NewFeaturesActivity extends BaseActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.TextView1:
-                startActivity(new Intent(NewFeaturesActivity.this,RecycleViewActivity.class));
+                startActivity(new Intent(FirstActivity.this,RecycleViewActivity.class));
                 break;
             case R.id.TextView2:
-                startActivity(new Intent(NewFeaturesActivity.this,CardViewActivity.class));
+                startActivity(new Intent(FirstActivity.this,CardViewActivity.class));
                 break;
         }
     }

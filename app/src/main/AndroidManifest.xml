@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".view.NewFeaturesActivity">
+        <activity android:name=".view.FirstActivity">
 
         </activity>
         <activity android:name=".view.RecycleViewActivity">
@@ -28,6 +28,11 @@
 
         </activity>
         <activity android:name=".view.MaterialDesignActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity android:name=".view.CoordinatorLayoutActivity"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>

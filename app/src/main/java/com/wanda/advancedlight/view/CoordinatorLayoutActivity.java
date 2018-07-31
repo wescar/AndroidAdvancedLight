@@ -1,87 +1,74 @@
 package com.wanda.advancedlight.view;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.NavigationView;
+import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
-import android.widget.Toast;
+import android.view.View;
 
 import com.wanda.advancedlight.BaseActivity;
 import com.wanda.advancedlight.R;
 import com.wanda.advancedlight.presenter.FragmentAdapter;
+import com.wanda.advancedlight.presenter.RecyclerViewAdapter;
 import com.wanda.advancedlight.view.fragment.ListFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 /**
- * Created by PC on 2018/7/30.
+ * Created by PC on 2018/7/31.
  */
 
-public class MaterialDesignActivity extends BaseActivity {
+public class CoordinatorLayoutActivity extends BaseActivity {
 
-    private DrawerLayout mDrawerLayout;
+
     private ViewPager mViewPager;
     private TabLayout mTabLayout;
-
-
+    List<String> mList = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_materialdesign);
-        initView();
+        setContentView(R.layout.activity_coordinatorlayout);
+        mList.add("1");
+        mList.add("2");
+        mList.add("3");
+        mList.add("4");
+//        initView();
+        initCoordinatorLayout();
+    }
+
+    private void initCoordinatorLayout() {
+        Toolbar toolbar  = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        collapsingToolbarLayout.setTitle("移动执法");
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.VERTICAL));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(new RecyclerViewAdapter(CoordinatorLayoutActivity.this,mList));
     }
 
     @Override
     public void initView() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
         final ActionBar ab = getSupportActionBar();
-        ab.setHomeAsUpIndicator(R.mipmap.four);
         ab.setDisplayHomeAsUpEnabled(true);
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_main_drawer);
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nv_main_navigation);
-        if (navigationView != null){
-            navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    item.setChecked(true);
-                    String title = item.getTitle().toString();
-                    Toast.makeText(MaterialDesignActivity.this, title, Toast.LENGTH_SHORT).show();
-                    mDrawerLayout.closeDrawers();
-                    return true;
-                }
-            });
-        }
         initViewPager();
-
     }
 
     @Override
     public void initToolbar() {
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case android.R.id.home:
-                mDrawerLayout.openDrawer(GravityCompat.START);
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     private void initViewPager(){
@@ -113,5 +100,9 @@ public class MaterialDesignActivity extends BaseActivity {
         mTabLayout.setupWithViewPager(mViewPager);
         mTabLayout.setTabsFromPagerAdapter(mFragmentAdapteradaper);
 
+    }
+
+    public void checkin(View view){
+        Snackbar.make(view,"点击成功",Snackbar.LENGTH_SHORT).show();
     }
 }

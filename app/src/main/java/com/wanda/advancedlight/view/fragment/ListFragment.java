@@ -29,13 +29,20 @@ public class ListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.list_fragment, container, false);
         mRecyclerView  = (RecyclerView)rootView.findViewById(R.id.recyclerView);
-
-
-//        mRecyclerView = (RecyclerView) inflater.inflate(R.layout.list_fragment,container,false);
-
         mList.add("1");
         mList.add("2");
         mList.add("3");
+        mList.add("3");
+        mList.add("3");
+        mList.add("3");
+        mList.add("4");
+        mList.add("4");
+        mList.add("4");
+        mList.add("4");
+        mList.add("4");
+        mList.add("4");
+        mList.add("4");
+        mList.add("4");
         mList.add("4");
         return rootView;
     }
