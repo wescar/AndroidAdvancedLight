@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">AndroidAdvancedLight</string>
+    
+    
     <string name="first_chapter">第一章</string>
     <string name="two_chapter">第二章</string>
     <string name="three_chapter">第三章</string>
@@ -24,4 +26,9 @@
     <string name="controlSize">控制圆角大小</string>
     <string name="controlArea">控制阴影面积</string>
     <string name="controlPicture">控制图片间距</string>
+    
+    <string name="test">测试</string>
+    <string name="determine">确定</string>
+
+    <string name="custom_composite_controls">自定义组合控件</string>
 </resources>

@@ -1,12 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.wanda.advancedlight.presenter.TitleBar
+
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:title_bg="@android:color/holo_orange_dark"
+        app:title_text="@string/custom_composite_controls"
+        app:title_text_color="@android:color/holo_blue_dark"
+        >
+
+    </com.wanda.advancedlight.presenter.TitleBar>
+
+
     <com.wanda.advancedlight.presenter.CustomView
+        android:clickable="true"
+        android:id="@+id/custom_view"
         android:background="@color/cardview_dark_background"
         android:layout_width="50dp"
-        android:layout_height="50dp" />
+        android:layout_height="50dp"
+        android:layout_gravity="center"/>
 
+
+    <TextView
+        android:id="@+id/textview"
+        android:text="@string/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+    <com.wanda.advancedlight.presenter.InvalidTextView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:text="@string/test"
+        android:layout_gravity="center"/>
+
+    <com.wanda.advancedlight.presenter.RectView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
 </LinearLayout>
