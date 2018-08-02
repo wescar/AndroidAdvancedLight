@@ -16,7 +16,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity {
 
-    @BindViews({R.id.chapter_first,R.id.chapter_two,R.id.chapter_three})
+    @BindViews({R.id.chapter_first,R.id.chapter_two,R.id.chapter_three,R.id.chapter_four})
     List<Button> Button;
 
     @Override
@@ -48,6 +48,12 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,ThreeActivity.class));
+            }
+        });
+        Button.get(3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,SixActivity.class));
             }
         });
     }

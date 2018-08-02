@@ -32,6 +32,14 @@
         android:background="@drawable/button_chapter"
         android:textColor="@color/white"
         android:text="@string/three_chapter"/>
+    <Button
+        android:layout_margin="10dp"
+        android:id="@+id/chapter_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_chapter"
+        android:textColor="@color/white"
+        android:text="@string/four_chapter"/>
 
 
 

@@ -27,6 +27,9 @@
         <activity android:name=".view.ThreeActivity">
 
         </activity>
+        <activity android:name=".view.SixActivity">
+
+        </activity>
         <activity android:name=".view.RecycleViewActivity">
 
         </activity>

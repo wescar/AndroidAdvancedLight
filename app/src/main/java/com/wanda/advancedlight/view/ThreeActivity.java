@@ -11,11 +11,11 @@ import com.wanda.advancedlight.R;
 
 import java.util.List;
 
-import butterknife.BindView;
 import butterknife.BindViews;
 import butterknife.ButterKnife;
 
 /**
+ * View体系与自定义View
  * Created by PC on 2018/7/31.
  */
 
