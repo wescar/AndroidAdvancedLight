@@ -27,10 +27,16 @@
         <activity android:name=".view.ThreeActivity">
 
         </activity>
+        <activity android:name=".view.FourActivity">
+
+        </activity>
         <activity android:name=".view.SixActivity">
 
         </activity>
         <activity android:name=".view.RecycleViewActivity">
+
+        </activity>
+        <activity android:name=".view.RadioGroupActivity">
 
         </activity>
         <activity android:name=".view.CardViewActivity">

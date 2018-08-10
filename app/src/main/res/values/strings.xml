@@ -19,6 +19,15 @@
     <string name="open_navigationView">NavigationView</string>
     <string name="open_coordinatorLayout">CoordinatorLayout</string>
     <string name="open_viewSliding">View的滑动</string>
+    <string name="four_RadioGroup">使用RadioGroup控件实现选择处理</string>
+    <string name="four_RadioGroup_TextView">性别:</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="name">账号</string>
+    <string name="password">密码</string>
+    <string name="save">保存</string>
+    <string name="remove">清除</string>
+    <string name="show">展示</string>
 
 
 
@@ -26,9 +35,10 @@
     <string name="controlSize">控制圆角大小</string>
     <string name="controlArea">控制阴影面积</string>
     <string name="controlPicture">控制图片间距</string>
-    
+    <string name="SearchFiles">搜索文件</string>
     <string name="test">测试</string>
     <string name="determine">确定</string>
+
 
     <string name="custom_composite_controls">自定义组合控件</string>
 </resources>
